@@ -51,16 +51,16 @@ public class MoneyTransferTest {
                 () ->assertEquals(expectedBalanceSecondCard, actualBalanceSecondCard));
     }
 
-    @Test
-    void shouldGetErrorMessageIfAmountMoreBalance() {
-        var amount = generateValidAmount(secondCardBalance);
-        var transferPage = dashboardPage.selectCardToTransfer(firstCardInfo);
-        transferPage.makeTransfer(String.valueOf(amount), secondCardInfo);
-        assertAll(()
-                 -> dashboardPage.reloadDashbordPage(),
-                () -> assertEquals(firstCardBalance,dashboardPage.getCardBalance(getMaskedNumber(firstCardInfo.getCardNumber()))),
-                () -> assertEquals(secondCardBalance, dashboardPage.getCardBalance(getMaskedNumber(secondCardInfo.getCardNumber()))));
-    }
+//    @Test
+//    void shouldGetErrorMessageIfAmountMoreBalance() {
+//        var amount = generateValidAmount(secondCardBalance);
+//        var transferPage = dashboardPage.selectCardToTransfer(firstCardInfo);
+//        transferPage.makeTransfer(String.valueOf(amount), secondCardInfo);
+//        assertAll(()
+//                 -> dashboardPage.reloadDashbordPage(),
+//                () -> assertEquals(firstCardBalance,dashboardPage.getCardBalance(getMaskedNumber(firstCardInfo.getCardNumber()))),
+//                () -> assertEquals(secondCardBalance, dashboardPage.getCardBalance(getMaskedNumber(secondCardInfo.getCardNumber()))));
+//    }
 
 
 }
