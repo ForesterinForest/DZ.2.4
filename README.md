@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/duqta3hc35pvl7bd?svg=true)](https://ci.appveyor.com/project/ForesterinForest/dz-2-4)
